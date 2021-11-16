@@ -1,13 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inconsolata&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'PT Sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+    color: inherit;
+    text-decoration: none; 
+    margin: 10px;
+}
+
+.navbar {
+    border-right: solid black 2px;
+    height: 100vh;
+    width: 27vh;
+    padding: 20px;
+}
+
+.navbar > h1 {
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.links {
+    position: relative;
+    margin-top: 40px;
+    text-align: center;
+    color: #7a73ff;
+}
+
+a:hover {
+    color: black;
+}
+
+#logo-top {
+    letter-spacing: 1.5px;
+}
+
+#logo-bottom {
+    position: absolute;
+    top: 95px;
+    letter-spacing: 1.5px;
+}
+
+hr.logo-hr {
+    border: 1px solid #7a73ff;
+    position: relative;
+    bottom: 20px;
+}
+
+.home-content {
+    margin-left: 2vh;
+}
+
+.subscribe {
+    margin-top: 35px;
+}
+
+.App {
+    display: flex;
+    flex-direction: row;
+}
+
+#signup-button {
+    background-color: #7a73ff;
+    color: white;
+    padding: 4px;
+    font-size: 1-px;
+}
+
+#signup-button:hover {
+    cursor: pointer;
+}
+
+.email-input {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #7a73ff;
+    width: 100%;
+    bottom: 35px;
+}
+
+button, input[type="submit"] {
+    border: none;
+}
+
+.recent-posts {
+    position: relative;
+    left: -10px;
+    line-height: 0.24cm;
+    color: #7a73ff;
+}
+
+.recent-posts > a:hover {
+    color: black;
 }
