@@ -1,12 +1,21 @@
 import React from 'react'
+import { useState } from 'react';
 
 const Home = () => {
+    const [blogs, setBlogs] = useState([
+        { title: "My first post", body: "lorem ipsum", author: "joe pantaliono", id: 1 },
+        { title: "My second post. My second post!", body: "lorem ipsum", author: "joe pantaliono", id: 2 },
+        { title: "My third post", body: "lorem ipsum", author: "joe pantaliono", id: 3 }
+    ])
+
     return (
         <div className="home-content">
-            <div className="post1">
-                <h2>My first post's title</h2>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
-            </div>
+            {blogs.map((blog) => (
+                <div className="blog-preview" key={blog.id}>
+                    <h2>{blog.title}</h2>
+                    <p>{blog.author}</p>
+                </div>
+            ))}
         </div>
     )
 }
